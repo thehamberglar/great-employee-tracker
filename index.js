@@ -157,3 +157,11 @@ var connection = mysql.createConnection({
       
           const roleChoices = res.map(({ id, title, salary }) => ({
             value: id, title: `${title}`, salary: `${salary}`
+        }));
+
+        console.table(res);
+        console.log("RoleToInsert!");
+    
+        promptInsert(roleChoices);
+      });
+    }
